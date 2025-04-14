@@ -17,12 +17,11 @@
 --Grey-500: hsl(234, 12%, 34%);
 --Grey-400: hsl(212, 6%, 44%);
 --White: hsl(0, 0%, 100%);
-    
 }
 
 body{
     font-family: 'Poppins';
-    font-weight: 400;
+    font-weight: 200;
     font-size: 14px;
 
     padding: 18px;
@@ -43,18 +42,11 @@ h1 span{
 .bio{
     font-weight: 400;
     text-align: center;
-    margin-top: 10px;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 section{
     padding: 24px;
-    margin-top: 30px;
+
 
     width: 360px;
     height: 240px;
@@ -65,19 +57,19 @@ section{
 }
 
 .supervisor{
-    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -3px var(--Cyan) ;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -4px var(--Cyan) ;
 }
 
 .team-builder{
-    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -3px var(--Red) ;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -4px var(--Red) ;
 }
 
 .karma{
-    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -3px var(--Orange) ;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -4px var(--Orange) ;
 }
 
 .calculator{
-    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -3px var(--Blue) ;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2), 0px -4px var(--Blue) ;
 }
 
 img{
@@ -90,30 +82,43 @@ img{
 
     body{
         font-size: 15px;
-    }
-
-    .container{
       
-       display: grid;
-       align-items: center;
-       justify-content: center;
-       grid-template-columns: repeat(3, 400px);
-    }
-    section{
-        margin: 14px;
-    }
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3, 400px);
+     }
 
-    .supervisor{
+     h1,
+     .bio,
+     .team-builder,
+     .karma
+     {
+        grid-column: 2/2;
+     }
+
+   .supervisor{
+    grid-column: 1/1;
         position: relative;
         top: 50%;
     }
 
     .calculator{
+        grid-column: 3/3;
         position: relative;
         bottom: 50%;
     }
 
-    .karma{
-        grid-column: 2/2;
+}
+
+@media (max-width: 999px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    section{
+        margin-top: 30px;
+    }
+
 }
