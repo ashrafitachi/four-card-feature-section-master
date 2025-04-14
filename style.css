@@ -27,6 +27,9 @@ body{
 
     padding: 18px;
     background-color: var(--White);
+
+    width: 100dvw;
+    height: 100dvh;
 }
 
 h1{
@@ -85,10 +88,11 @@ img{
 
 @media (min-width: 1000px){
     .container{
-       width: 1000px;
+      
        display: grid;
        align-items: center;
-       grid-template-columns: repeat(3, 1fr);
+       justify-content: center;
+       grid-template-columns: repeat(3, 400px);
     }
     section{
         margin: 14px;
